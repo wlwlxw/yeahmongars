@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecteurs Audio Interactifs</title>
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+
+    <div class="container">
+        <h1>se brosser </h1>
+
+        <div class="audio-player">
+            <h2>cepillarse </h2>
+            <audio id="audio1" src="audio/cepillarse.mp3" type="audio/mpeg"></audio>
+            <button onclick="playAudio('audio1')">Jouer</button>
+            <button onclick="setspeed(0.5)('audio1')">Pause</button>
+            <button onclick="stopAudio('audio1')">Arrêter</button>
+        </div>
+
+        <div class="audio-player">
+            <h2>escovar-se</h2>
+            <audio id="audio2" src="audio/escorva-se.mp3" type="audio/wav"></audio>
+            <button onclick="playAudio('audio2')">Jouer</button>
+            <button onclick="setspeed(0.5)('audio2')"><xspeed</x0>pause</button>
+            <button onclick="stopAudio('audio2')">Arrêter</button>
+        </div>
+
+        <div class="audio-player">
+            <h2>spazzolarsi</h2>
+            <audio id="audio3" src="audio/spazzolarsi.mp3" type="audio/ogg"></audio>
+            <button onclick="playAudio('audio3')">Jouer</button>
+            <button onclick="setspeed(0.5)('audio3')">Pause</button>
+            <button onclick="stopAudio('audio3')">Arrêter</button>
+        </div>
+    </div>
+
+    <script>
+        function playAudio(audioId) {
+            const audio = document.getElementById(audioId);
+            audio.play();
+        }
+
+        function pauseAudio(audioId) {
+            const audio = document.getElementById(audioId);
+            audio.pause();
+        }
+
+        function stopAudio(audioId) {
+            const audio = document.getElementById(audioId);
+            audio.pause();
+            audio.currentTime = 0; // Réinitialiser le temps de lecture
+        }
+    </script>
+
+</body>
+</html>
